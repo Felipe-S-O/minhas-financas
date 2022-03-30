@@ -15,6 +15,9 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
+import br.com.inottec.minhasfinancas.model.enums.StatusLancamento;
+import br.com.inottec.minhasfinancas.model.enums.TipoLancamento;
+
 @Entity
 @Table(name = "lancamento", schema = "financas")
 public class Lancamento {
