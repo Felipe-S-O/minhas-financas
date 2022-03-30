@@ -10,20 +10,27 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "usuario", schema = "financas")
 public class Usuario {
-	
+
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(name = "nome")
 	private String nome;
-	
+
 	@Column(name = "email")
 	private String email;
-	
+
 	@Column(name = "senha")
 	private String senha;
+
+	public Usuario(String nome, String email) {
+		super();
+		this.nome = nome;
+		this.email = email;
+	}
+
 //============================= get e set ========================================
 
 	public Long getId() {
@@ -57,6 +64,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
 //=========================================== equals ============================
 	@Override
 	public int hashCode() {
@@ -100,17 +108,16 @@ public class Usuario {
 			return false;
 		return true;
 	}
- //===================================== tostring ======================
+
+	// ===================================== tostring ======================
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
+
+	public static Object builder() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
