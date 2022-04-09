@@ -31,6 +31,13 @@ public class Usuario {
 		this.email = email;
 	}
 
+	public Usuario(String nome, String email, String senha) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+	}
+
 //============================= get e set ========================================
 
 	public Long getId() {
